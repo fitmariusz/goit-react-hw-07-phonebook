@@ -8,7 +8,8 @@ export const App = () => {
   return (
     <>
       <div className='divForm'> 
-        <PhoneBook/>
+        <PhoneBook />
+        {isLoading && !error && <b>Request in progress...</b>}
         <ContactsSection/>
       </div>
     </>
