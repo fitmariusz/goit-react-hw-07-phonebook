@@ -1,13 +1,13 @@
 import { useDispatch } from 'react-redux';
 import css from './Form.module.css'
-import { addContact } from '../../redux/contactSlice';
+import { addContact } from '../../redux/operations';
 
 
 export const Form = () => {
   const dispatch = useDispatch();
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(addContact(document.getElementById("nameContact").value, document.getElementById("numberContact").value))
+    dispatch(addContact({name: document.getElementById("nameContact").value, number: document.getElementById("numberContact").value}))
     document.getElementById("nameContact").value = '';
     document.getElementById("numberContact").value = '';
    };
