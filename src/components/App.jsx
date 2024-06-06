@@ -9,7 +9,7 @@ export const App = () => {
     <>
       <div className='divForm'> 
         <PhoneBook />
-        {isLoading && !error && <b>Request in progress...</b>}
+        {/* {isLoading && !error && <b>Request in progress...</b>} */}
         <ContactsSection/>
       </div>
     </>
